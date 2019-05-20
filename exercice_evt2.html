@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    document.addEventListener('DOMContentLoaded',function(evt){
+
+    
+     var frm = document.querySelector('#frm');
+     frm.addEventListener('submit',function(event){
+        console.log("submit kkjjlljfljdlf");
+        var log = document.querySelector('#log');
+        if(log.value.length>2)
+        {
+            this.submit();
+                
+
+        }
+        else{
+            event.preventDefault();
+        }
+     })
+
+    })
+    </script>
+</head>
+<body>
+   <form action="script.php" id="frm" methode="get" onsumbit="return valider(this)">
+
+
+   <input type="text" id="log"  name="login">
+   <button>
+       envoyer
+   </button> 
+   </form> 
+</body>
+</html>
